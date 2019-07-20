@@ -17,6 +17,7 @@ function applyClickHandlers(){
   $('#number-block').on('click','.number',numberButtonHandler);
   $('#operator-column').on('click', '.operator', operatorButtonHandler);
   $('#equals').on('click', equalsButtonHandler);
+  $('#decimal').on('click', decimalButtonHandler);
 
     function numberButtonHandler(event){
       var inputtedNumber = "";
@@ -27,8 +28,12 @@ function applyClickHandlers(){
       //console.log(displayArray);
       updateDisplay();
 
-
-
+  }
+  function decimalButtonHandler(event){
+    var inputtedDecimal = "";
+    inputtedDecimal= $(event.currentTarget).find('p').text();
+    displayArray.push(inputtedDecimal);
+    updateDisplay();
   }
 
   function operatorButtonHandler(event){
