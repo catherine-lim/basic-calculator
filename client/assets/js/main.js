@@ -58,7 +58,6 @@ function applyClickHandlers(){
     console.log(answer);
     updateDisplay();
 
-
 }
 
 }
