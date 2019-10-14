@@ -1,4 +1,5 @@
 body {
+    background-color: rgb(245, 167, 22);
     height: 100vh;
 
 }
@@ -13,7 +14,7 @@ body * {
     transform: translate(-50%, -50%);
     height: 70%;
     width: 30%;
-    background-color: lavender;
+    background-color: rgb(241, 196, 111);
 }
 .display-text {
     text-align: right;
@@ -26,7 +27,7 @@ body * {
     /* margin: 0 auto; */
     height: 15%;
     width: 85%;
-    background-color: peachpuff;
+    background-color: rgb(235, 220, 16);
     left: 7.5%;
 }
 
@@ -37,7 +38,7 @@ body * {
     left: 7.5%;
     height: 15%;
     width: 85%;
-    background-color: chartreuse;
+    background-color: rgb(235, 220, 16);
 }
 .c-button, .ac-button {
     position: relative;
@@ -47,7 +48,7 @@ body * {
     height: 75%;
     width: 45%;
     display: inline-block;
-    background-color: rebeccapurple;
+    background-color: rgb(218, 233, 161);
     margin: 0px;
 }
 
@@ -56,7 +57,7 @@ body * {
     position: relative;
     height: 60%;
     width: 60%;
-    background-color: chartreuse;
+    background-color: rgb(235, 220, 16);
     top: 28px;
     left: 7.5%;
     margin-top: 8px;
@@ -69,14 +70,14 @@ body * {
     width: 32%;
     left: 2px;
     margin-top: 3px;
-    background-color: hotpink;
+    background-color: rgb(218, 233, 161);
 }
 .operator-column {
     position: relative;
     display: inline-block;
     height: 60%;
     width: 24%;
-    background-color: chartreuse;
+    background-color: rgb(235, 220, 16);
     top: 36px;
     left: 7.5%;
 }
@@ -84,7 +85,7 @@ body * {
     position: relative;
     margin-top: 3px;
     height: 24%;
-    background-color: cornflowerblue;
+    background-color: rgb(218, 233, 161);
 }
 .center {
     position: absolute;

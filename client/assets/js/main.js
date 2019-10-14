@@ -18,7 +18,16 @@ function applyClickHandlers(){
   $('#operator-column').on('click', '.operator', operatorButtonHandler);
   $('#equals').on('click', equalsButtonHandler);
   $('#decimal').on('click', decimalButtonHandler);
+  $('.c-button-containers').on('click', allClearButtonHandler);
 
+function allClearButtonHandler(event){
+  displayArray = [];
+  updateDisplay();
+  stringNumberToPush = "";
+  calculationArray = [];
+  
+  
+}
     function numberButtonHandler(event){
       var inputtedNumber = "";
       inputtedNumber= $(event.currentTarget).find('p').text();
@@ -32,6 +41,7 @@ function applyClickHandlers(){
   function decimalButtonHandler(event){
     var inputtedDecimal = "";
     inputtedDecimal= $(event.currentTarget).find('p').text();
+    stringNumberToPush += inputtedDecimal;
     displayArray.push(inputtedDecimal);
     updateDisplay();
   }
@@ -57,7 +67,20 @@ function applyClickHandlers(){
     stringNumberToPush = "";
     displayArray = [];
     console.log(calculationArray);
-    var answer = calculate(calculationArray[0], calculationArray[2], calculationArray[1]);
+    //var answer = calculate(calculationArray[0], calculationArray[2], calculationArray[1]);
+
+    var calculateValue = null;
+    var answer = parseFloat(calculationArray[0])
+
+    for(var i =0; i < calculationArray.length-1 ; i+=2){
+      //console.log("calculattion Array", calculationArray)
+      calculateValue = calculate(answer,calculationArray[i+2],calculationArray[i+1]);
+      answer = calculateValue;
+}
+
+
+
+
 
     displayArray.push(answer);
     console.log(answer);
@@ -69,6 +92,7 @@ function applyClickHandlers(){
 function updateDisplay() {
   var displayText = displayArray.join("");
   $('#display-text').text(displayText);
+  
 }
 
 function calculate(num1, num2, operator){
@@ -88,9 +112,12 @@ function calculate(num1, num2, operator){
           result = number1 * number2;
           break;
           case '/':
+            if(number2 === 0){
+              result = "error"
+            } else{
           result = number1 / number2;
-          break;
-            //console.log(result);
+            }
+         
 }
 
 return result;
