@@ -18,16 +18,21 @@ function applyClickHandlers(){
   $('#operator-column').on('click', '.operator', operatorButtonHandler);
   $('#equals').on('click', equalsButtonHandler);
   $('#decimal').on('click', decimalButtonHandler);
-  $('.c-button-containers').on('click', allClearButtonHandler);
+  $('#ac-button').on('click', allClearButtonHandler);
+  $('#c-button').on('click', clearButtonHandler);
 
 function allClearButtonHandler(event){
   displayArray = [];
   updateDisplay();
   stringNumberToPush = "";
   calculationArray = [];
-  
-  
 }
+
+function clearButtonHandler(event){
+  displayArray = [];
+  updateDisplay();
+}
+
     function numberButtonHandler(event){
       var inputtedNumber = "";
       inputtedNumber= $(event.currentTarget).find('p').text();
